@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "70b7ca2f-eeb3-46c5-b0ef-9f89d07e9385",
+		"name": "SpringBootDemo1",
+		"description": "Fase 3 ejercicio modulo 11 Iniciación a Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GETname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{IP}}:{{port}}/v1/user/{jonatan}",
+					"protocol": "http",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"{jonatan}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETgreetingName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{IP}}:{{port}}/v1/greeting",
+					"protocol": "http",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"greeting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETHelloWorld",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{IP}}:{{port}}/v1/",
+					"protocol": "http",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
