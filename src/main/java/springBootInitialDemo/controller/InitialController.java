@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import springBootInitialDemo.dto.Greeting;
 import springBootInitialDemo.dto.UserResponseDto;
 import springBootInitialDemo.service.IUserService;
 
@@ -27,9 +28,9 @@ public class InitialController {
         return "Hello Gradle!";
     }
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(value = "name", defaultValue = "Rita")String name){
-        return String.format(template, name);
+    @GetMapping("/greeting/{name}")
+    public Greeting greeting(@PathVariable(name = "name")String name){
+        return new Greeting (String.format(template, name));
     }
 
     //@PutMapping(value ="", consumes = {"application/json"})
